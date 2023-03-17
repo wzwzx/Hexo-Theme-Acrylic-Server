@@ -10,6 +10,7 @@ DATABASES = {
             'HOST': 'us-east.connect.psdb.cloud',
             'PORT': '3306',
             'OPTIONS': {
+                {'ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA')}}
                 "init_command": "SET sql_mode='STRICT_TRANS_TABLES'"
             }
     }
